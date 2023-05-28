@@ -1,0 +1,266 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DashBoard</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro&family=Montserrat:ital,wght@0,500;0,800;1,600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+    <link href="https://fontawesome.com/icons/user?f=classic&s=light&pc=%23a17eb4">
+</head>
+
+<body>
+    <div class="grid-container">
+
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <span class="material-icons-outlined">menu</span>
+            </div>
+            <div class="header-left">
+                <span class="material-icons-outlined">
+                    search
+                </span>
+            </div>
+            <div class="header-right">
+                <span class="material-icons-outlined">
+                    notifications
+                </span>
+                <span class="material-icons-outlined">
+                    account_circle
+                </span>
+            </div>
+        </header>
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined">
+                        home
+                    </span>
+                    Materialized
+                </div>
+                <span class="material-icons-outlined" onclick="closeSidebar()">
+                    close
+                </span>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">
+                        dashboard
+                    </span>
+                    DashBoard
+                </li>
+
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">
+                        add_shopping_cart
+                    </span>
+                    Purchase Orders
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">
+                        chat
+                    </span>
+                    Chat
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">
+                        person
+                    </span>
+                    User
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">
+                        shield
+                    </span>
+                    Roles & Permisssion
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">
+                        email
+                    </span>
+                    Email
+                </li>
+                <li class="sidebar-list-item">
+                    <span class="material-icons-outlined">
+                        stacked_bar_chart
+                    </span>
+                    Reports
+                </li>
+            </ul>
+        </aside>
+        <main class="main-container">
+            <div class="main-title">
+                <p class="font-weight-bold">Dashboard</p>
+
+            </div>
+            <div class="main-cards">
+
+                <div class="card">
+                    <div class="in">
+                        <h3 class="text-primary">SalesOverview</h3>
+                        <span>
+                        <p class="text-primary1">Total 42.5k Sales  &nbsp;
+                            +18%^</p>
+                       
+                    </span>
+                    </div>
+                    <div class="card-inner">
+
+                        <div>
+                            <span>
+                            <img src="user.png" height="40px">
+                            8,454 Customers
+                        </span>
+                        </div>
+                        <div>
+                            <span>
+                            <img src="bar-graph.png" height="40px">
+                            $28.5k TotalProfit
+                        </span>
+                        </div>
+                        <div>
+                            <span>
+                            <img src="growth.png" height="40px">
+                            2,450k Transactions
+                        </span>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="card">
+
+                    <div class="card-inner">
+                        <div>
+                            <h3 class="text-primary">Rating</h3>
+                            <p>Year of 2022</p>
+                        </div>
+                        <div class="photo">
+                            <img src="card-stats-img-1.png" height="130px">
+                        </div>
+
+                    </div>
+                    <span class="text-primary font-weight-bold">8.14k</span>
+                </div>
+                <div class="card">
+
+                    <div class="card-inner">
+                        <div>
+                            <h3 class="text-primary">Session</h3>
+                            <p class="text-primary">Last Month</p>
+                        </div>
+                        <div class="photo">
+                            <img src="card-stats-img-2.png" height="130px">
+                        </div>
+                    </div>
+                    <span class="text-primary font-weight-bold">12.4k</span>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="charts-card">
+                    <div class="charts-cards">
+                        <p class="chart-title">Sales this Months</p>
+                        <div id="area-chart"></div>
+                    </div>
+                </div>
+
+                <div class="charts-card">
+                    <div class="charts-cards">
+                        <p class="chart-title">Live Visitors</p>
+                        <div id="bar-chart"></div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="main-card1">
+                <div class="card">
+                 <table class="table">
+                        <thead >
+                            <tr>
+                                <th >User</th>
+                                <th >Email</th>
+                                <th >Role</th>
+                                <th >Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Neeraj</th>
+                                <td>devd@gmail.com</td>
+                                <td>developer</td>
+                                <td >Active</td>
+                            </tr>
+                            <tr>
+                                <td>thalapathy</th>
+                                <td>thala@gmail.com</td>
+                                <td>Actor</td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>Salman</th>
+                                <td>sal@gmail.com</td>
+                                <td>Artist</td>
+                                <td>Pending</td>
+                            </tr>
+                            <tr>
+                                <td>Rajini</th>
+                                <td>Rajini@gmail.com</td>
+                                <td>Painter</td>
+                                <td>Active</td>
+                            </tr>
+                            <tr>
+                                <td>SRk</th>
+                                <td>srk@gmail.com</td>
+                                <td>Philosphy</td>
+                                <td>Pending</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                   
+                
+            
+            </div>
+           
+                <div class="card">
+                    <div class="card-inner">
+                        <div>
+                     
+                    <img src="pie-graph.png" height="70px">
+                </div>
+                <div>
+                    <h2>84k</h2>
+                    <p>Total Impression</p>
+                </div>
+                    </div>
+                    
+                  </div>
+                  
+                  <div class="card">
+                    <div class="card-inner">
+                        <div>
+                    <img src="rate.png"  height="70px">  
+                </div>
+                   
+                   <div>
+                    <h2>22k</h2>
+                    <p>Total Orders</p>
+                </div>
+             </div>
+            </div>
+        </main>
+
+
+
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.40.0/apexcharts.min.js"></script>
+    <script src="js/script.js"></script>
+
+
+</body>
+
+</html>
